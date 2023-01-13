@@ -1,4 +1,5 @@
 import 'package:concept_designs/src/common.dart';
+import 'package:concept_designs/src/fika_coffee/pages/fika_coffee_page.dart';
 import 'package:concept_designs/src/travy/travy_nav.dart';
 
 class MyApp extends StatelessWidget {
@@ -23,15 +24,30 @@ class _MyView extends StatelessWidget {
         child: ListView(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
           children: [
-            ElevatedButton(
-              onPressed: () {
-                context.push(page: const TravyNav());
-              },
-              child: const Text('Travy'),
+            _buildButton(
+              context: context,
+              page: const TravyNav(),
+              name: 'Travy',
+            ),
+            _buildButton(
+              context: context,
+              page: const FikaCoffeePage(),
+              name: 'Fika Coffee',
             ),
           ],
         ),
       ),
+    );
+  }
+
+  ElevatedButton _buildButton({
+    required BuildContext context,
+    required Widget page,
+    required String name,
+  }) {
+    return ElevatedButton(
+      onPressed: () => context.push(page: page),
+      child: Text(name),
     );
   }
 }
