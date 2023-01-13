@@ -1,4 +1,5 @@
 import 'package:concept_designs/src/common.dart';
+import 'package:concept_designs/src/custom_snackbar/custom_snackbar_page.dart';
 import 'package:concept_designs/src/fika_coffee/pages/fika_coffee_page.dart';
 import 'package:concept_designs/src/travy/travy_nav.dart';
 
@@ -33,6 +34,11 @@ class _MyView extends StatelessWidget {
               context: context,
               page: const FikaCoffeePage(),
               name: 'Fika Coffee',
+            ),
+            _buildButton(
+              context: context,
+              page: const CustomSnackbarPage(),
+              name: 'Custom Snackbar',
             ),
           ],
         ),
