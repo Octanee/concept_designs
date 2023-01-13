@@ -16,18 +16,16 @@ class CustomSnackbarPage extends StatelessWidget {
             ElevatedButton(
               onPressed: () => CustomSnackbar.showSnackbar(
                 context,
-                title: 'Oh Snap!',
-                message:
-                    'You have failed to read this failure message. Please try again!',
+                title: 'Well done!',
+                message: 'You have successfully completed the form. Good job!',
               ),
               child: const Text('Success'),
             ),
             ElevatedButton(
               onPressed: () => CustomSnackbar.showSnackbar(
                 context,
-                title: 'Oh Snap!',
-                message:
-                    'You have failed to read this failure message. Please try again!',
+                title: 'Hi there!',
+                message: 'Do you have a problem? Just use this contact form.',
                 type: CustomSnackbarType.help,
               ),
               child: const Text('Help'),
@@ -35,9 +33,8 @@ class CustomSnackbarPage extends StatelessWidget {
             ElevatedButton(
               onPressed: () => CustomSnackbar.showSnackbar(
                 context,
-                title: 'Oh Snap!',
-                message:
-                    'You have failed to read this failure message. Please try again!',
+                title: 'Warning!',
+                message: 'Sorry! There was a problem with your request.',
                 type: CustomSnackbarType.warning,
               ),
               child: const Text('Warning'),

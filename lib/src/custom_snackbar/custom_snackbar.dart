@@ -4,19 +4,19 @@ import 'package:flutter_svg/flutter_svg.dart';
 enum CustomSnackbarType {
   success(
     path: 'assets/custom_snackbar/success.svg',
-    color: Colors.green,
+    color: Color(0xFF329632),
   ),
   help(
     path: 'assets/custom_snackbar/help.svg',
-    color: Colors.indigo,
+    color: Color(0xFF2D3CC8),
   ),
   warning(
     path: 'assets/custom_snackbar/warning.svg',
-    color: Colors.amber,
+    color: Color(0xFFC87D0A),
   ),
   failure(
     path: 'assets/custom_snackbar/failure.svg',
-    color: Colors.deepOrange,
+    color: Color(0xFFE13219),
   );
 
   const CustomSnackbarType({required this.path, required this.color});
@@ -60,7 +60,11 @@ class CustomSnackbar {
                 borderRadius: BorderRadius.circular(radius),
                 child: DecoratedBox(
                   decoration: BoxDecoration(
-                    color: color,
+                    gradient: LinearGradient(
+                      colors: [color, colorDark],
+                      begin: Alignment.bottomLeft,
+                      end: Alignment.topRight,
+                    ),
                   ),
                   child: Stack(
                     alignment: Alignment.bottomLeft,
