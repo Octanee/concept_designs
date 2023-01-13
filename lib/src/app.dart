@@ -2,6 +2,7 @@ import 'package:concept_designs/src/common.dart';
 import 'package:concept_designs/src/custom_snackbar/custom_snackbar_page.dart';
 import 'package:concept_designs/src/fika_coffee/pages/fika_coffee_page.dart';
 import 'package:concept_designs/src/travy/travy_nav.dart';
+import 'package:concept_designs/src/universe/universe_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -39,6 +40,11 @@ class _MyView extends StatelessWidget {
               context: context,
               page: const CustomSnackbarPage(),
               name: 'Custom Snackbar',
+            ),
+            _buildButton(
+              context: context,
+              page: const UniversePage(),
+              name: 'Universe',
             ),
           ],
         ),
