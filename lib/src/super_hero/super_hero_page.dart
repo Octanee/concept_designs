@@ -1,41 +1,19 @@
 import 'dart:math' as math;
 
+import 'package:concept_designs/src/common.dart';
+import 'package:concept_designs/src/super_hero/models/super_hero.dart';
+import 'package:concept_designs/src/super_hero/super_hero_details_page.dart';
 import 'package:ionicons/ionicons.dart';
-
-import '../common.dart';
-import 'models/super_hero.dart';
-import 'super_hero_details_page.dart';
 
 class SuperHeroPage extends StatelessWidget {
   const SuperHeroPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-
     return Scaffold(
       body: SafeArea(
         child: Column(
           children: [
-            // Positioned(
-            //   top: 24,
-            //   right: 24,
-            //   child: IconButton(
-            //     onPressed: () {},
-            //     icon: const Icon(Ionicons.search),
-            //   ),
-            // ),
-            // const Padding(
-            //   padding:
-            //       EdgeInsets.only(top: 32, left: 32, right: 32, bottom: 32),
-            //   child: Text(
-            //     'Marvel',
-            //     style: TextStyle(
-            //       fontSize: 48,
-            //       fontWeight: FontWeight.w700,
-            //     ),
-            //   ),
-            // ),
             Padding(
               padding: const EdgeInsets.only(left: 32, right: 24, top: 8),
               child: Row(
