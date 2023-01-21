@@ -1,3 +1,4 @@
+import 'package:concept_designs/src/car_app/car_app.dart';
 import 'package:concept_designs/src/common.dart';
 import 'package:concept_designs/src/custom_snackbar/custom_snackbar_page.dart';
 import 'package:concept_designs/src/fika_coffee/pages/fika_coffee_page.dart';
@@ -51,6 +52,11 @@ class _MyView extends StatelessWidget {
               context: context,
               page: const SuperHeroPage(),
               name: 'Super Hero',
+            ),
+            _buildButton(
+              context: context,
+              page: const CarApp(),
+              name: 'Car App',
             ),
           ],
         ),

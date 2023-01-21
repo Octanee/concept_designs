@@ -17,6 +17,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.1
+  flutter_inset_box_shadow: ^1.0.8
   flutter_svg: ^1.1.6
   ionicons: ^0.2.1
   logger: ^1.1.0
@@ -35,3 +36,4 @@ flutter:
     - assets/custom_snackbar/
     - assets/universe/
     - assets/super_hero/
+    - assets/car_app/
