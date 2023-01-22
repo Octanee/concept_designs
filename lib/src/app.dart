@@ -1,6 +1,7 @@
 import 'package:concept_designs/src/animated_login/animated_login_app.dart';
 import 'package:concept_designs/src/car_app/car_app.dart';
 import 'package:concept_designs/src/common.dart';
+import 'package:concept_designs/src/custom_drawer/custom_drawer_app.dart';
 import 'package:concept_designs/src/custom_snackbar/custom_snackbar_page.dart';
 import 'package:concept_designs/src/fika_coffee/pages/fika_coffee_page.dart';
 import 'package:concept_designs/src/super_hero/super_hero_page.dart';
@@ -63,6 +64,11 @@ class _MyView extends StatelessWidget {
               context: context,
               page: const AnimatedLoginApp(),
               name: 'Animated login',
+            ),
+            _buildButton(
+              context: context,
+              page: CustomDrawerApp(),
+              name: 'Custom drawer',
             ),
           ],
         ),
