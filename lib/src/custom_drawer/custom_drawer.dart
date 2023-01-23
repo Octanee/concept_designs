@@ -100,6 +100,9 @@ class _CustomDrawerState extends State<CustomDrawer>
         builder: (context, snapshot) {
           return Stack(
             children: [
+              //* ------------------------------
+              //* Drawer
+              //* ------------------------------
               AnimatedPositioned(
                 duration: defaultDuration,
                 height: size.height,
@@ -127,6 +130,9 @@ class _CustomDrawerState extends State<CustomDrawer>
                   ),
                 ),
               ),
+              //* ------------------------------
+              //* Content Page
+              //* ------------------------------
               AnimatedPositioned(
                 top: 0,
                 bottom: 0,
@@ -137,13 +143,17 @@ class _CustomDrawerState extends State<CustomDrawer>
                 duration: defaultDuration,
                 child: widget.controller.selectedPage.body,
               ),
+              //* ------------------------------
+              //* Open/Close Button
+              //* ------------------------------
               AnimatedPositioned(
                 top: size.height * 0.05,
                 height: size.height * 0.14,
                 width: size.width * 0.07,
-                left: widget.controller.isExpanded
-                    ? size.width * widget.expandedDrawerSize
-                    : size.width * widget.colapsedDrawerSize,
+                left: (widget.controller.isExpanded
+                        ? size.width * widget.expandedDrawerSize
+                        : size.width * widget.colapsedDrawerSize) -
+                    1,
                 duration: defaultDuration,
                 child: GestureDetector(
                   onTap: updateDrawer,
@@ -165,6 +175,30 @@ class _CustomDrawerState extends State<CustomDrawer>
           );
         },
       ),
+    );
+  }
+}
+
+class DrawerItem extends StatelessWidget {
+  const DrawerItem({
+    super.key,
+    required this.title,
+    this.leading,
+    this.isSelected = false,
+  });
+
+  final Widget title;
+  final Widget? leading;
+  final bool isSelected;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        leading ?? const SizedBox.shrink(),
+        const SizedBox(width: defaultPadding),
+        title,
+      ],
     );
   }
 }

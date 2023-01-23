@@ -1,5 +1,7 @@
+import 'package:concept_designs/src/animated_login/constants.dart';
 import 'package:concept_designs/src/common.dart';
 import 'package:concept_designs/src/custom_drawer/custom_drawer.dart';
+import 'package:ionicons/ionicons.dart';
 
 class CustomDrawerApp extends StatelessWidget {
   CustomDrawerApp({super.key});
@@ -21,8 +23,14 @@ class CustomDrawerApp extends StatelessWidget {
       child: CustomDrawer(
         controller: _controller,
         header: const Text('Header'),
-        itemBuilder: (context, index, isSelected) =>
-            Text('Page build $index $isSelected'),
+        divider: const Divider(
+          color: Colors.grey,
+          height: defaultPadding * 2,
+        ),
+        itemBuilder: (context, index, isSelected) => DrawerItem(
+          leading: Icon(_icons[index]),
+          title: Text('Page $index'),
+        ),
       ),
     );
   }
@@ -34,4 +42,12 @@ final _colors = [
   Colors.blue,
   Colors.amber,
   Colors.red
+];
+
+final _icons = [
+  Ionicons.home_outline,
+  Ionicons.list_outline,
+  Ionicons.contract_outline,
+  Ionicons.add_outline,
+  Ionicons.settings_outline,
 ];
