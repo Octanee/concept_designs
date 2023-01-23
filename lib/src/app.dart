@@ -1,6 +1,7 @@
 import 'package:concept_designs/src/animated_login/animated_login_app.dart';
 import 'package:concept_designs/src/car_app/car_app.dart';
 import 'package:concept_designs/src/common.dart';
+import 'package:concept_designs/src/custom_buttons/custom_buttons.dart';
 import 'package:concept_designs/src/custom_drawer/custom_drawer_app.dart';
 import 'package:concept_designs/src/custom_snackbar/custom_snackbar_page.dart';
 import 'package:concept_designs/src/fika_coffee/pages/fika_coffee_page.dart';
@@ -75,6 +76,11 @@ class _MyView extends StatelessWidget {
               context: context,
               page: const NikeStore(),
               name: 'Nike Store',
+            ),
+            _buildButton(
+              context: context,
+              page: const CustomButtons(),
+              name: 'Custom Buttons',
             ),
           ],
         ),
