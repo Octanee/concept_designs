@@ -1,4 +1,5 @@
 import 'package:concept_designs/src/animated_login/animated_login_app.dart';
+import 'package:concept_designs/src/batman_sign_up/batman_sign_up.dart';
 import 'package:concept_designs/src/car_app/car_app.dart';
 import 'package:concept_designs/src/common.dart';
 import 'package:concept_designs/src/custom_buttons/custom_buttons.dart';
@@ -81,6 +82,11 @@ class _MyView extends StatelessWidget {
               context: context,
               page: const CustomButtons(),
               name: 'Custom Buttons',
+            ),
+            _buildButton(
+              context: context,
+              page: const BatmanSignUp(),
+              name: 'Batman Sign Up',
             ),
           ],
         ),
